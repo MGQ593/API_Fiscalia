@@ -1,0 +1,45 @@
+# Comandos Git para subir el proyecto a GitHub
+
+# 1. Inicializar repositorio
+git init
+
+# 2. Agregar todos los archivos
+git add .
+
+# 3. Verificar qué se va a commitear
+git status
+
+# 4. Crear el primer commit
+git commit -m "Initial commit: Fiscalia Proxy API with authentication"
+
+# 5. Conectar con GitHub (reemplaza TU-USUARIO con tu nombre de usuario)
+git remote add origin https://github.com/TU-USUARIO/fiscalia-proxy-api.git
+
+# 6. Renombrar rama a main (si es necesario)
+git branch -M main
+
+# 7. Subir el código
+git push -u origin main
+
+# ===================================
+# Comandos para actualizaciones futuras
+# ===================================
+
+# Agregar cambios
+git add .
+
+# Crear commit
+git commit -m "Descripción de los cambios"
+
+# Subir a GitHub
+git push
+
+# ===================================
+# Generar token seguro
+# ===================================
+
+# Opción 1: Con openssl
+openssl rand -hex 32
+
+# Opción 2: Con Node.js
+node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
